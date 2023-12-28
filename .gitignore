@@ -1,0 +1,5 @@
+__pycache__
+data/raw/*
+data/intermediate/*
+!data/raw/.gitkeep
+!data/intermediate/.gitkeep
