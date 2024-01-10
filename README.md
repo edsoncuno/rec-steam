@@ -3,6 +3,10 @@ docker run -it -p 8000:8000 -v $PWD:/usr/src/app “fastapi_entorno“
 ```
 
 ```bash
+uvicorn main:app --reload
+```
+
+```bash
 docker start -a “fastapi_entorno“
 ```
 

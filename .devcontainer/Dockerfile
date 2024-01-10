@@ -3,6 +3,4 @@ FROM python:3.8
 WORKDIR /app
 COPY . .
 
-RUN pip install -r requirements.txt
-
-ENTRYPOINT uvicorn --host 0.0.0.0 main:app --reload
+RUN pip install -r ./.devcontainer/requirements.txt

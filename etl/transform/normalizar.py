@@ -32,7 +32,7 @@ def reemplazar(df, columna, valor, new_valor):
     df[columna] = df[columna].apply(lambda x: new_valor if x == valor else x)
 
 
-def unir_columnas_de_texto(df, columna1, columna2):
+def unir_columnas_de_texto(df, columna1, columna2, new_column):
     df[columna1] = df[columna1].fillna("")
     df[columna2] = df[columna2].fillna("")
 
@@ -44,5 +44,5 @@ def unir_columnas_de_texto(df, columna1, columna2):
         else:
             return row[columna1] + " " + row[columna2]
 
-    df["name"] = df.apply(combinar_nombres, axis=1)
+    df[new_column] = df.apply(combinar_nombres, axis=1)
     df.drop(columns=[columna1, columna2], inplace=True)
