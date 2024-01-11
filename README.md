@@ -1,21 +1,23 @@
+# REC Steam
+
+Motor de recomendacion para Steam
+
 ```bash
 docker run -it -p 8000:8000 -v $PWD:/usr/src/app “fastapi_entorno“
 ```
+
+## Desarrollo
+
+Para utilizar el entorno de desarrollo se necesita:
 
 ```bash
 uvicorn main:app --reload
 ```
 
-```bash
-docker start -a “fastapi_entorno“
-```
-
-Los paquetes que se tiene que instalar para realizar el proceso de ETL en los notebook, son:
+Los paquetes que se tiene que instalar para realizar el proceso de ETL en los notebook y desarrollo del backend:
 
 ```bash
-pip install numpy pandas matplotlib seaborn
-# librerias para usar el formato parquet
-pip install pyarrow fastparquet
+pip install seaborn ipykernel pyarrow fastparquet fastapi uvicorn
 ```
 
 Tambien se debe instalar la libreria de NLP utilizada en este proyecto

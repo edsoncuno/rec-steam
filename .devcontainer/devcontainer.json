@@ -1,17 +1,16 @@
 {
-  "build": {
-    "context": "..",
-    "dockerfile": "./Dockerfile"
-  },
-  "customizations": {
-    "vscode": {
-      "settings": {},
-      "extensions": [
-        "ms-azuretools.vscode-docker",
-        "ms-python.python",
-        "ms-python.black-formatter",
-        "ms-toolsai.jupyter"
-      ]
-    }
-  }
+	"image": "mcr.microsoft.com/devcontainers/python:3.8",
+	"customizations": {
+		"vscode": {
+			"settings": {},
+			"extensions": [
+				"ms-azuretools.vscode-docker",
+				"ms-python.python",
+				"ms-python.black-formatter",
+				"ms-toolsai.jupyter"
+			]
+		}
+	},
+	"postCreateCommand": "bash ./.devcontainer/install-dependencies.sh"
+	//"postCreateCommand": "pip install ./.devcontainer/requirements.txt"
 }
