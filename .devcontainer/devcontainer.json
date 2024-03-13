@@ -12,5 +12,4 @@
 		}
 	},
 	"postCreateCommand": "bash ./.devcontainer/install-dependencies.sh"
-	//"postCreateCommand": "pip install ./.devcontainer/requirements.txt"
 }
